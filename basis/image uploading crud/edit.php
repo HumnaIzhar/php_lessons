@@ -37,11 +37,11 @@
 </div>
 <div class="container card card-body" style="background-color:lightgrey;">
 <center><h1>Edit Data</h1></center>
-<form action="update.php" method="POST" enctype="multipart/form-data">
+<form action="update.php" method="post">
 <div class="form-group row">
-<label for="colFormLabel" class="col-sm-2 col-form-label col-form-label">Name</label>
+<label for="colFormLabel" class="col-sm-2 col-form-label col-form-label">id</label>
 <div class="col-sm-10">
-<input name="name" type="text" value="<?= $row['id'] ?>" class="form-control form-control-sm" id="colFormLabel" placeholder=" Enter Your id ">
+<input name="id" type="number" value="<?= $row['id'] ?>" class="form-control form-control-sm" id="colFormLabel" placeholder=" Enter Your id ">
 </div>
 </div>
 <div class="form-group row">
@@ -77,8 +77,8 @@
 <div class="form-group row">
 <label for="colFormLabel" class="col-sm-2 col-form-label col-form-label">Image</label>
 <div class="col-sm-10">
-<input type="file"  name="file"   >
-</div>
+<input type="file"  name="file"  value="<?= $row['file'] ?>" >
+</div> 
 </div>
 <center><button type="submit" class="btn btn-success" name="savedata">Edit</button></center>
 </form>
